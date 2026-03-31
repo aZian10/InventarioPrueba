@@ -14,6 +14,7 @@ def agregar_producto():
         print("Ingrese datos validos")
 
 def mostrar_inventario():
+    #Mostras lista 
     if not inventario:
         print("El inventario esta vacio")
     else:
@@ -22,6 +23,7 @@ def mostrar_inventario():
             print(f"Producto: {i['nombre']} | Precio: {i['precio']:.2f} | Cantidad: {i['cantidad']}")
 
 def calcular_estadisticas():
+    #Calcula el valor y unidades totales
     print("Estadisticas")
     if not inventario:
         print("No hay datos")
@@ -34,6 +36,7 @@ def calcular_estadisticas():
     print(f"Cantidad total: {total_unidades}")
 
 def menu():
+    #Controla el programa
     while True:
         print("Sistema de gestion")
         print("1. Agregar producto")
@@ -53,8 +56,10 @@ def menu():
             print("Salir")
             break
         else:
+            #Validacion
             print("Opcion invalida")
 
+#Entrada
 if __name__=="__main__":
     menu()
 
